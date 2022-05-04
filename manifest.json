@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Borderify",
+    "version": "1.0",
+    "description": "this is a description",
+    "options_page": "options.html",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ]
+}
