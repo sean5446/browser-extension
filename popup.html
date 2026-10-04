@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="my-extension.css">
+    <meta charset="utf-8">
+    <title>Link Notepad</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
 
-    <div class="content">
-        <button id="changeColor">Button that has a really long name</button>
+    <header class="header">
+        <h1>Link Notepad</h1>
+        <div class="meta">
+            <span id="linkCount" class="count">0 links</span>
+            <span id="status" class="status" role="status" aria-live="polite"></span>
+        </div>
+    </header>
+
+    <div class="actions">
+        <button id="openSelected" type="button" class="primary" disabled>Open selected</button>
+        <button id="openAll" type="button" disabled>Open all</button>
+        <button id="addCurrentTab" type="button">+ Add this tab</button>
     </div>
 
-    <script src="popup.js"></script>
+    <textarea id="notes" spellcheck="false" aria-label="Your saved links and notes"
+placeholder="Paste links here.
+
+Highlight some text and press Open selected."></textarea>
+
+    <script type="module" src="popup.js"></script>
+
 </body>
 
 </html>

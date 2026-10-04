@@ -1,0 +1,10 @@
+{
+  "name": "link-notepad",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A notepad for links. Highlight some and open them all in new tabs.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}

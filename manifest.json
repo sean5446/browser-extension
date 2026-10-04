@@ -1,29 +1,14 @@
 {
     "manifest_version": 3,
-    "name": "Borderify",
-    "version": "1.0",
-    "description": "this is a description",
-    "options_page": "options.html",
-    "background": {
-        "service_worker": "background.js"
-    },
+    "name": "Link Notepad",
+    "version": "1.0.0",
+    "description": "A notepad for links. Highlight some and open them all in new tabs.",
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_title": "Link Notepad"
     },
-    "content_scripts": [
-        {
-            "matches": [
-                "http://*/*",
-                "https://*/*"
-            ],
-            "js": [
-                "content.js"
-            ]
-        }
-    ],
     "permissions": [
         "storage",
-        "activeTab",
-        "scripting"
+        "activeTab"
     ]
 }
